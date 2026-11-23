@@ -1,0 +1,94 @@
+
+    /* Custom theme enhancements on top of Bootstrap 5 native color modes */
+    :root {
+        --bs-font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    /* Dark Mode Background & Surface Styling */
+    [data-bs-theme="dark"] body {
+        background: radial-gradient(circle at top right, #1e1b4b 0%, #0f172a 45%, #090d16 100%);
+    }
+
+    [data-bs-theme="dark"] .navbar-custom {
+        background-color: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    [data-bs-theme="dark"] .login-card {
+        background-color: rgba(30, 41, 59, 0.75);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    /* Light Mode Background & Surface Styling */
+    [data-bs-theme="light"] body {
+        background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f1f5f9 100%);
+    }
+
+    [data-bs-theme="light"] .navbar-custom {
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    [data-bs-theme="light"] .login-card {
+        background-color: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8) !important;
+    }
+
+    .brand-badge {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+    }
+
+    /* Custom divider styling */
+    .divider-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: var(--bs-secondary-color);
+        font-size: 0.85rem;
+    }
+
+    .divider-text::before,
+    .divider-text::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid var(--bs-border-color);
+    }
+
+    .divider-text:not(:empty)::before {
+        margin-right: 0.75rem;
+    }
+
+    .divider-text:not(:empty)::after {
+        margin-left: 0.75rem;
+    }
+
+    /* Ensure password toggle button aligns cleanly with form-floating */
+    .password-toggle-btn {
+        z-index: 5;
+        border: none;
+        background: transparent;
+        color: var(--bs-secondary-color);
+    }
+
+    .password-toggle-btn:hover {
+        color: var(--bs-body-color);
+    }
