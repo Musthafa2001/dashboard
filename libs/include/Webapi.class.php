@@ -5,13 +5,13 @@ class WebAPI
 
     public function __construct()
     {
-        // print("session initiated");
-        // hello
+      
     }
     public function initiateSession()
     {
 
         Session::start();
+        print("again initiated");
         print("initiated new session");
 
         if(session::isset('sessiontoken')){
