@@ -12,6 +12,7 @@ class WebAPI
 
         Session::start();
         print("again initiated");
+        
         print("initiated new session");
 
         if(session::isset('sessiontoken')){
