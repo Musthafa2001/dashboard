@@ -1,0 +1,9 @@
+name: when pushing the baseline
+on: push
+jobs:
+  mybuild:
+    runs-on: self-hosted
+    steps:
+      - name: show what is triggered 
+        run:
+          echo "Event Name"
