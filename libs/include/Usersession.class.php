@@ -28,7 +28,7 @@ VALUES ('$username', '$password', '$email','0');";
 
 
         // Process the result set
-        if ($result->num_rows >0) {
+        if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             // print_r($row);
             if ($row['password'] == $pass) {
@@ -67,7 +67,7 @@ VALUES ('$id', '$token', now(), '$user_agent', '$ip_addr', '1');";
             $session = new Usersession($token);
 
             if ($session) {
-                session::$userdata= new User(Usersession::$id);
+                session::$userdata = new User(Usersession::$id);
             }
         }
     }
@@ -79,7 +79,7 @@ VALUES ('$id', '$token', now(), '$user_agent', '$ip_addr', '1');";
         $currentTimestamp = time();
 
         // 2. Define 30 minutes in seconds (30 minutes * 60 seconds)
-        $sessionLifetime = 30*60;
+        $sessionLifetime = 30 * 60;
 
         // 3. Check if current time has exceeded login time + 30 minutes
         if (($currentTimestamp - $loginTimestamp) > $sessionLifetime) {
