@@ -13,7 +13,7 @@ class WebAPI
         Session::start();
         print("poassible");
 
-        print("initiated new session");
+        print("initia new session");
     print("new version");
 
 
