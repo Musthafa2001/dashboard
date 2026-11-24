@@ -11,7 +11,7 @@ class WebAPI
     {
 
         Session::start();
-        print("again initiated");
+        print("poassible");
 
         print("initiated new session");
     print("new version");
